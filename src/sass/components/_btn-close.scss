@@ -1,0 +1,29 @@
+.btn-close {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--white-color);
+    transition: fill var(--delay-time) var(--time-function);
+  }
+
+  &:hover,
+  &:focus {
+    .btn-close__icon {
+      fill: var(--accent-color);
+    }
+  }
+}

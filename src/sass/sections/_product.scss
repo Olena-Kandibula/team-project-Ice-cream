@@ -1,0 +1,362 @@
+.container__product {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product {
+  padding-top: 120px;
+  padding-bottom: 98px;
+  background-color: var(--white-color);
+
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 144px;
+  }
+
+  &__item {
+    width: 280px;
+    padding-top: 161px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    border-radius: 24px;
+
+    @media screen and (max-width: 319px) {
+      width: 100%;
+    }
+  }
+
+  &__name {
+    position: relative;
+    font-family: 'Titan One';
+    @include font($fw: 400, $fs: 20px, $lh: 23px, $ls: 0.04em);
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    max-height: 124px;
+    overflow: hidden;
+    font-family: DM Sans;
+    @include font($fw: 700, $fs: 14px, $lh: 21px, $ls: 0.04em);
+    color: var(--white-color);
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: var(--white-color);
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+    fill: var(--btn-red-color);
+  }
+}
+
+.product__btn:hover,
+.product__btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background: var(--btn-gray-color);
+}
+
+.product__item {
+  &:not(:last-child) {
+    margin-bottom: 130px;
+  }
+
+  &:nth-child(1) {
+    background-color: var(--bcg-hero-color);
+  }
+
+  &:nth-child(2) {
+    background-color: var(--coffee-color);
+  }
+
+  &:nth-child(3) {
+    background-color: var(--green-color);
+  }
+}
+
+.product__name::after {
+  content: ' ';
+  display: block;
+  width: 26px;
+  height: 6px;
+  margin: auto;
+  background-image: url(../images/desktop/product/points-3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+
+.product__item > .product__name::before {
+  content: ' ';
+  display: block;
+  width: 249px;
+  height: 252px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 22px));
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: 319px) {
+    width: 200px;
+    height: 201px;
+  }
+
+  @media screen and (max-width: 240px) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.product__item:nth-child(1) > .product__name::before {
+  background-image: url(../images/mobile/product/1-product-mob.png);
+}
+
+.product__item:nth-child(2) > .product__name::before {
+  background-image: url(../images/mobile/product/2-product-mob.png);
+}
+
+.product__item:nth-child(3) > .product__name::before {
+  background-image: url(../images/mobile/product/3-product-mob.png);
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .product__item:nth-child(1) > .product__name::before {
+    background-image: url(../images/mobile/product/1-product-mob@2x.png);
+  }
+
+  .product__item:nth-child(2) > .product__name::before {
+    background-image: url(../images/mobile/product/2-product-mob@2x.png);
+  }
+
+  .product__item:nth-child(3) > .product__name::before {
+    background-image: url(../images/mobile/product/3-product-mob@2x.png);
+  }
+
+  .product__name::after {
+    background-image: url(../images/desktop/product/points-3@2x.png);
+  }
+}
+
+// ==tablet==
+@media screen and (min-width: 768px) {
+  $card-gap: 20px;
+
+  .product {
+    padding-top: 122px;
+    padding-bottom: 112px;
+
+    &__title {
+      margin-bottom: 150px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-basis: calc((100% - #{$card-gap}* 2) / 3);
+      padding-top: 152px;
+      padding-right: 11px;
+      padding-left: 11px;
+    }
+
+    &__description {
+      margin-bottom: 40px;
+      @include font($fw: 700, $fs: 14px, $lh: 25px, $ls: 0.04em);
+    }
+  }
+
+  .product__item:not(:last-child) {
+    margin-right: $card-gap;
+    margin-bottom: 0;
+  }
+
+  .product__item:nth-child(1) > .product__name::before {
+    width: 220px;
+    height: 226px;
+    background-image: url(../images/tablet/product/1-product-tab.png);
+  }
+
+  .product__item:nth-child(2) > .product__name::before {
+    width: 220px;
+    height: 233px;
+    background-image: url(../images/tablet/product/2-product-tab.png);
+  }
+
+  .product__item:nth-child(3) > .product__name::before {
+    width: 220px;
+    height: 224px;
+    background-image: url(../images/tablet/product/3-product-tab.png);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .product__item:nth-child(1) > .product__name::before {
+      background-image: url(../images/tablet/product/1-product-tab@2x.png);
+    }
+    .product__item:nth-child(2) > .product__name::before {
+      background-image: url(../images/tablet/product/2-product-tab@2x.png);
+    }
+
+    .product__item:nth-child(3) > .product__name::before {
+      background-image: url(../images/tablet/product/3-product-tab@2x.png);
+    }
+  }
+}
+
+// ==desktop
+@media screen and (min-width: 1280px) {
+  $card-gap: 24px;
+
+  .product {
+    padding-top: 126px;
+    padding-bottom: 120px;
+
+    &__title {
+      margin-bottom: 259px;
+    }
+
+    &__item {
+      flex-basis: calc((100% - #{$card-gap}* 2) / 3);
+      padding-top: 163px;
+      padding-right: 44px;
+      padding-left: 44px;
+      padding-bottom: 50px;
+    }
+
+    &__name {
+      margin-bottom: 32px;
+      @include font($fw: 400, $fs: 30px, $lh: 34px, $ls: 0.03em);
+    }
+
+    &__description {
+      max-height: 106px;
+      margin-bottom: 62px;
+      @include font($fw: 700, $fs: 16px, $lh: 28px, $ls: 0.04em);
+    }
+  }
+
+  .product__name::after {
+    margin-top: 32px;
+  }
+
+  .product__item:not(:last-child) {
+    margin-right: $card-gap;
+  }
+
+  .product__item:nth-child(1) > .product__name::before {
+    width: 335px;
+    height: 335px;
+    background-image: url(../images/desktop/product/1-product-laptop.png);
+  }
+
+  .product__item:nth-child(2) > .product__name::before {
+    width: 337px;
+    height: 335px;
+    background-image: url(../images/desktop/product/2-product-laptop.png);
+  }
+
+  .product__item:nth-child(3) > .product__name::before {
+    width: 335px;
+    height: 335px;
+    background-image: url(../images/desktop/product/3-product-laptop.png);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .product__item:nth-child(1) > .product__name::before {
+      background-image: url(../images/desktop/product/1-product-laptop@2x.png);
+    }
+    .product__item:nth-child(2) > .product__name::before {
+      background-image: url(../images/desktop/product/2-product-laptop@2x.png);
+    }
+
+    .product__item:nth-child(3) > .product__name::before {
+      background-image: url(../images/desktop/product/3-product-laptop@2x.png);
+    }
+  }
+}
+// overlay====
+.product__wrapper {
+  position: relative;
+}
+.product__overlay-1,
+.product__overlay-2,
+.product__overlay-3 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  padding: 5px;
+  @include font($fw: 700, $fs: 14px, $lh: 21px, $ls: 0.04em);
+  color: var(--white-color);
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.25s;
+  z-index: 100;
+}
+
+.product__overlay-1 {
+  background-color: var(--bcg-hero-color);
+}
+.product__overlay-2 {
+  background-color: var(--coffee-color);
+}
+.product__overlay-3 {
+  background-color: var(--green-color);
+}
+
+.overlay__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.overlay__text {
+  margin-bottom: 5px;
+}
+
+.product__btn-1:hover + .product__overlay-1,
+.product__btn-1:focus + .product__overlay-1 {
+  opacity: 1;
+  top: 0;
+}
+
+.product__btn-2:hover + .product__overlay-2,
+.product__btn-2:focus + .product__overlay-2 {
+  opacity: 1;
+  top: 0;
+}
+
+.product__btn-3:hover + .product__overlay-3,
+.product__btn-3:focus + .product__overlay-3 {
+  opacity: 1;
+  top: 0;
+}

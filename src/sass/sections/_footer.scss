@@ -1,0 +1,97 @@
+.footer {
+  background: var(--bcg-pink-color);
+}
+
+// title
+.title_footer {
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.footer__tel {
+  text-align: right;
+  color: var(--black-color);
+
+  &-link {
+    color: var(--accent-color);
+  }
+}
+// авторские права
+.footer__copyright {
+  border-top: 1px solid #e1e1e1;
+
+  &-text {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    @include font(700, 14px, 1.86, 0.02em);
+    color: var(--primary-text-color);
+  }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-top: 56px;
+  }
+  .footer__box-title {
+    max-width: 234px;
+  }
+  .footer__box {
+    margin-top: 42px;
+    margin-right: auto;
+  }
+  .footer__tel {
+    margin-top: 46px;
+    margin-bottom: 42px;
+    @include font(700, 12px, 1.86, 0.02em);
+  }
+  .footer__copyright {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    &-text {
+      max-width: 150px;
+    }
+  }
+}
+
+// tablet
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-top: 78px;
+  }
+  .container_footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__box-title {
+    max-width: 340px;
+  }
+  .footer__tel {
+    margin-top: 46px;
+    margin-bottom: 174px;
+    @include font(700, 12px, 1.86, 0.02em);
+  }
+  .footer__copyright {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+// desktop
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding-top: 82px;
+  }
+  .footer__box-title {
+    max-width: 100%;
+  }
+  .footer__tel {
+    margin-bottom: 98px;
+  }
+  .footer__copyright {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

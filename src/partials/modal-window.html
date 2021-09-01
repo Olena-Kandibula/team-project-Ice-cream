@@ -1,0 +1,38 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal-window">
+    <svg class="modal-window__logo" width="50" height="50">
+      <use href="./images/sprite.svg#ice-cream"></use>
+    </svg>
+    <b class="motivation">Leave your contacs, our staff will call you in 10 minutes</b>
+    <form action="#" class="modal-form">
+      <label for="user-name" class="modal-form__input-label">Name</label>
+      <div class="input-wrapper">
+        <input type="text" name="user-name" id="user-name" class="modal-form__input" required />
+        <svg class="modal-form__icon" width="18" height="18">
+          <use href="./images/sprite.svg#icon-form-person"></use>
+        </svg>
+      </div>
+      <label for="user-phone" class="modal-form__input-label">Phone number</label>
+      <div class="input-wrapper">
+        <input type="tel" name="user-phone" id="user-phone" class="modal-form__input" required />
+        <svg class="modal-form__icon" width="18" height="18">
+          <use href="./images/sprite.svg#icon-form-phone"></use>
+        </svg>
+      </div>
+
+      <label for="user-comment" class="modal-form__input-label">Description</label>
+      <textarea
+        name="comment"
+        id="user-comment"
+        placeholder="Leave your comment here"
+        class="modal-form__input"
+      ></textarea>
+      <button type="submit" class="button button_send">Send</button>
+    </form>
+    <button type="button" class="btn-close" data-modal-close>
+      <svg class="btn-close__icon">
+        <use href="./images/sprite.svg#close"></use>
+      </svg>
+    </button>
+  </div>
+</div>

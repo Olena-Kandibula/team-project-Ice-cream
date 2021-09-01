@@ -1,0 +1,128 @@
+.title {
+  font-family: 'Titan One';
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+.title__label {
+  font-family: 'Titan One';
+  text-transform: uppercase;
+  color: var(--title-text-color);
+
+  &_hero {
+    color: var(--white-color);
+  }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+  .title {
+    @include font(400, 34px, 1.15, 0.04em);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 48px, 0.965, normal);
+    }
+  }
+
+  .title__label {
+    @include font(400, 30px, 1.17, normal);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 48px, 1.15, 0.04em);
+    }
+  }
+}
+
+// tablet
+@media screen and (min-width: 768px) {
+  .title {
+    @include font(400, 58px, 1.17, 0.04em);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 34px, 0.9005, 0.04em);
+    }
+  }
+
+  .title__label {
+    @include font(400, 26px, 1.15, normal);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 22px, 1.14, 0.04em);
+    }
+  }
+}
+
+// desktop
+@media screen and (min-width: 1280px) {
+  .title {
+    @include font(400, 58px, 1.14, 0.06em);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 58px, 0.905, 0.04em);
+    }
+  }
+
+  .title__label {
+    @include font(400, 30px, 1.33, 0.04em);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 38px, 1.16, 0.04em);
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+  .title {
+    @include font(400, 34px, 1.15, 0.04em);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 48px, 0.965, normal);
+    }
+  }
+
+  .title__label {
+    @include font(400, 30px, 1.17, normal);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 48px, 1.15, 0.04em);
+    }
+  }
+}
+
+// tablet
+@media screen and (min-width: 768px) {
+  .title {
+    @include font(400, 58px, 1.17, 0.04em);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 34px, 0.905, 0.04em);
+    }
+  }
+
+  .title__label {
+    @include font(400, 26px, 1.15, normal);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 48px, 1.14, 0.04em);
+    }
+  }
+}
+
+// desktop
+@media screen and (min-width: 1280px) {
+  .title {
+    @include font(400, 58px, 1.14, 0.06em);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 58px, 0.905, 0.04em);
+    }
+  }
+
+  .title__label {
+    @include font(400, 30px, 1.33, 0.04em);
+    // модификатор для HERO
+    &_hero {
+      @include font(400, 38px, 1.16, 0.04em);
+    }
+  }
+}
